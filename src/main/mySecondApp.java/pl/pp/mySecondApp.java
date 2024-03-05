@@ -5,14 +5,16 @@ import java.util.Scanner;
 public class mySecondApp {
     public static void main(String[] args) {
 
-        int x = 10;
+        Scanner scanner = new Scanner(System.in);
 
-        int doubleX = x * 2;
-        int xSquared = x * x;
+        System.out.print("Enter your age in years: ");
+        int ageInYears = scanner.nextInt();
 
-        System.out.println("x = " + x);
-        System.out.println("Double of x = " + doubleX);
-        System.out.println("x squared = " + xSquared);
+        long ageInSeconds = (long) ageInYears * 365 * 24 * 60 * 60;
+
+        System.out.println("My age in seconds is: " + ageInSeconds + " seconds");
+        scanner.close();
+
 
     }
 }
